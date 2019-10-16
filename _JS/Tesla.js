@@ -113,6 +113,20 @@ for (var i = 0; i < cajaCar.length; i++) {
 // Selecciono los iconos
 var icono = document.querySelectorAll('icono1 icono2 icono3');
 // modifico el tamaño
-icono.style.backgroundSize = 'auto';
+// icono.style.backgroundSize = 'auto';
 
 ///// DIEGO VALLEJO MIJALLO 2 DAW /////
+
+
+//// localStorage ////
+
+let carro = document.getElementById('img-carrito');
+carro.addEventListener('click', function() {
+    if (carro) {
+        alert('Hola');
+        carro.classList.add('.submenu .carrito');
+        // carro.style.display = 'block';
+    } else {
+        carro.classList.remove('.carrito');
+    }
+});
