@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
-    <title>Tesla made in Bangladesh</title>
+    <title>Tesla</title>
 </head>
 
 <body>
@@ -20,34 +21,57 @@
                 </div>
                 <div class="two columns u-pull-right">
                     <ul>
-                        <img src="img/cart.png" id="img-carrito">
-                        <li class="submenu subM2">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="mb-0">
+                                    <a data-fancybox data-src="#modal" href="javascript:;" class="btn btn-primary"><img src="img/cart.png" id="img-carrito"></a>
+                                </p>
+                                <div style="display: none;" id="modal">
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="img/coche006.jpg" width=100>
+                                                </td>
+                                                <td>Tesla Modelo X</td>
+                                                <td>35000</td>
+                                                <td><a href="#" class="borrar-coche"> X</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--<li class="submenu subM2">
                             <div class="carrito">
                                 <p class="vacio">Carrito Vacio</p>
                                 <table id="lista-carrito" class="u-full-width">
-                                    <thead>
+                               <thead>
                                         <tr>
                                             <th>Imagen</th>
                                             <th>Nombre</th>
                                             <th>Precio</th>
                                             <th></th>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src="img/coche006.jpg" width=100>
-                                            </td>
-                                            <td>Tesla Modelo X</td>
-                                            <td>35000</td>
-                                            <td><a href="#" class="borrar-coche"> X</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    </thead> 
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="img/coche006.jpg" width=100>
+                                </td>
+                                <td>Tesla Modelo X</td>
+                                <td>35000</td>
+                                <td><a href="#" class="borrar-coche"> X</a></td>
+                            </tr>
+                        </tbody>
+                        </table>
 
-                                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
-                            </div>
-                        </li>
+                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                </div>
+                </li>-->
                     </ul>
                 </div>
             </div>
@@ -63,7 +87,7 @@
                         <p><b>Precios sin competencia</b></p>
                         <form action="#" id="busqueda" method="post" class="formulario clase2 clase3">
                             <input class="u-full-width" type="text" placeholder="Busca tu modelo tesla" id="buscador">
-                            <input type="submit" id="submit-buscador" class="submit-buscador">
+                            <input type="" id="submit-buscador" class="submit-buscador">
                         </form>
                     </div>
                 </div>
@@ -208,6 +232,8 @@
 
 
 </body>
-<script src="_JS/Tesla.js"></script>
+<script src="js/Tesla.js"></script>
+<!-- <script src="code.jquery.com/jquery-3.2.1.min.js"></script> -->
+<script src="dist/jquery.fancybox.min.js"></script>
 
 </html>

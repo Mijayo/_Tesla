@@ -130,28 +130,3 @@ carro.addEventListener('click', function() {
         carro.classList.remove('.carrito');
     }
 });
-
-
-
-/// BUSCAR EL ELEMENTO ///
-var subBTN = document.getElementById('submit-buscador');
-var divS = document.getElementsByClassName('.info-card');
-
-// Evento para buscar en la lista es keyup()
-subBTN.addEventListener('keyup', filtrarItems);
-
-// Funcion para buscar en la lista
-function filtrarItems(e) {
-    // e.preventDefault();
-    var texto = e.target.value.toLowerCase();
-    var items = divS.getElementsByTagName('h4');
-    Array.from(items).forEach(function(item) {
-        var itemNombre = item.firstChild.textContent;
-        if (itemNombre.toLowerCase().indexOf(texto) != -1) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-    //console.log(ite);
-}

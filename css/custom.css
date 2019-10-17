@@ -2,6 +2,54 @@ body {
     background-color: #fff6f6
 }
 
+
+/*
+
+   Styles for animated modal
+   =========================
+
+*/
+
+
+/* Start state */
+
+.animated-modal {
+    max-width: 550px;
+    border-radius: 4px;
+    overflow: hidden;
+    transform: translateY(-50px);
+    transition: all .7s;
+}
+
+.animated-modal h2,
+.animated-modal p {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: .4s;
+}
+
+
+/* Final state */
+
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal h2,
+.fancybox-slide--current .animated-modal p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* Reveal content with different delays */
+
+.fancybox-slide--current .animated-modal h2 {
+    transition-delay: .1s;
+}
+
+.fancybox-slide--current .animated-modal p {
+    transition-delay: .3s;
+}
+
 h1 {
     text-align: center;
 }
@@ -82,6 +130,7 @@ ul {
 .contenido-portada form {
     position: relative;
     margin-bottom: 0;
+    color: #7e7e7e;
 }
 
 .contenido-portada form #buscador {
@@ -197,7 +246,6 @@ ul {
 .footer {
     margin-top: 40px;
     border-top: 1px solid #aaa;
-    ;
     padding-top: 40px;
 }
 
